@@ -77,8 +77,8 @@ static NSString *const baseURLString = @"https://randomuser.me/api/?format=json&
         NSMutableArray *fetchedPeople = [[NSMutableArray alloc] init];
         
         // looping through json data, check each dict, if it matches our model object then create a person
-        for (NSDictionary *dictionary in fetchedData) {
-            CDBPerson *person = [[CDBPerson alloc] initWithDictionary:dictionary];
+        for (NSDictionary *personDictionary in fetchedData) {
+            CDBPerson *person = [[CDBPerson alloc] initWithDictionary:personDictionary];
             // if a person has been created, append it to the array
             [fetchedPeople addObject:person];
         }

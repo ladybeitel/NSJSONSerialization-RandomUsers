@@ -17,5 +17,4 @@
 // return type, methodName, completion handler
 - (void)searchForPeople:(void (^)(NSError *error))completion;
 
-
 @end

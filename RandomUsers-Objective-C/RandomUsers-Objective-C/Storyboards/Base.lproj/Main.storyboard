@@ -110,6 +110,11 @@
                         <viewLayoutGuide key="safeArea" id="EbE-mF-UKj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Person name" id="CSU-rk-CBk"/>
+                    <connections>
+                        <outlet property="emailAddressLabel" destination="qDO-Ae-ZSB" id="hl4-to-ISd"/>
+                        <outlet property="phoneNumberLabel" destination="6UQ-sx-sje" id="lsv-uu-SCa"/>
+                        <outlet property="profileImageView" destination="hLb-tZ-Zz6" id="8I8-0u-i50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Koh-ro-yWk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

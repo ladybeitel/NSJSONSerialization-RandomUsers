@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "CDBPersonController.h"
 
 @interface CDBPeopleTableViewController : UITableViewController
 
-@end
+@property (nonatomic) CDBPersonController *personController;
 
-NS_ASSUME_NONNULL_END
+@end

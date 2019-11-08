@@ -10,23 +10,33 @@
 
 @interface CDBPersonDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *emailAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+
 @end
 
 @implementation CDBPersonDetailViewController
 
+- (void)setPerson:(CDBPerson *)person {
+    if (person != _person) {
+        _person = person;
+        [self updateViews];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self updateViews];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    self.title = self.person.name;
+    self.phoneNumberLabel.text = self.person.phone;
+    self.emailAddressLabel.text = self.person.email;
+    NSURL *url = [NSURL URLWithString: self.person.profile];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    self.profileImageView.image = [UIImage imageWithData:data];
 }
-*/
 
 @end
