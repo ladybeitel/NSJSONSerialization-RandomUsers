@@ -13,6 +13,9 @@
 		6E9F58512374E2C900F1D21B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F58502374E2C900F1D21B /* Assets.xcassets */; };
 		6E9F58542374E2C900F1D21B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F58522374E2C900F1D21B /* LaunchScreen.storyboard */; };
 		6E9F58572374E2C900F1D21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F58562374E2C900F1D21B /* main.m */; };
+		77D5F81E2374F9EC0091F6B4 /* CDBPersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5F81D2374F9EC0091F6B4 /* CDBPersonDetailViewController.m */; };
+		77D5F8212374F9FC0091F6B4 /* CDBPeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5F8202374F9FC0091F6B4 /* CDBPeopleTableViewController.m */; };
+		77D5F8242374FAE00091F6B4 /* CDBPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5F8232374FAE00091F6B4 /* CDBPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		6E9F58532374E2C900F1D21B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E9F58552374E2C900F1D21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9F58562374E2C900F1D21B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77D5F81C2374F9EC0091F6B4 /* CDBPersonDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBPersonDetailViewController.h; sourceTree = "<group>"; };
+		77D5F81D2374F9EC0091F6B4 /* CDBPersonDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBPersonDetailViewController.m; sourceTree = "<group>"; };
+		77D5F81F2374F9FC0091F6B4 /* CDBPeopleTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBPeopleTableViewController.h; sourceTree = "<group>"; };
+		77D5F8202374F9FC0091F6B4 /* CDBPeopleTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDBPeopleTableViewController.m; sourceTree = "<group>"; };
+		77D5F8222374FAE00091F6B4 /* CDBPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CDBPerson.h; path = "RandomUsers-Objective-C/CDBPerson.h"; sourceTree = SOURCE_ROOT; };
+		77D5F8232374FAE00091F6B4 /* CDBPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CDBPerson.m; path = "RandomUsers-Objective-C/CDBPerson.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,10 @@
 		6E9F58432374E2C700F1D21B /* RandomUsers-Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				6E9F58612374E31C00F1D21B /* Model */,
-				6E9F58602374E31600F1D21B /* Model Controller */,
-				6E9F585F2374E30E00F1D21B /* View Controllers */,
 				6E9F585D2374E2F100F1D21B /* Storyboards */,
+				6E9F585F2374E30E00F1D21B /* View Controllers */,
+				6E9F58602374E31600F1D21B /* Model Controller */,
+				6E9F58612374E31C00F1D21B /* Model */,
 				6E9F585E2374E2FC00F1D21B /* Resources */,
 				6E9F58552374E2C900F1D21B /* Info.plist */,
 			);
@@ -93,6 +102,10 @@
 		6E9F585F2374E30E00F1D21B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				77D5F81C2374F9EC0091F6B4 /* CDBPersonDetailViewController.h */,
+				77D5F81D2374F9EC0091F6B4 /* CDBPersonDetailViewController.m */,
+				77D5F81F2374F9FC0091F6B4 /* CDBPeopleTableViewController.h */,
+				77D5F8202374F9FC0091F6B4 /* CDBPeopleTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -107,6 +120,8 @@
 		6E9F58612374E31C00F1D21B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77D5F8222374FAE00091F6B4 /* CDBPerson.h */,
+				77D5F8232374FAE00091F6B4 /* CDBPerson.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 		6E9F58392374E2C700F1D21B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CDB;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Mitchell Budge";
 				TargetAttributes = {
@@ -181,9 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D5F81E2374F9EC0091F6B4 /* CDBPersonDetailViewController.m in Sources */,
 				6E9F58462374E2C700F1D21B /* AppDelegate.m in Sources */,
 				6E9F58572374E2C900F1D21B /* main.m in Sources */,
 				6E9F58492374E2C700F1D21B /* SceneDelegate.m in Sources */,
+				77D5F8242374FAE00091F6B4 /* CDBPerson.m in Sources */,
+				77D5F8212374F9FC0091F6B4 /* CDBPeopleTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
